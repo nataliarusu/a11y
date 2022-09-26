@@ -1,5 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="white" />
+    <meta name="description" content="The Speakeasy bar" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Speakeasy</title>
     <style>
       * {
         box-sizing: border-box;
@@ -13,7 +19,7 @@
       body {
         padding: 1.5rem;
         font-family: system-ui;
-        color: hsl(0, 5%, 60%);
+        color: hsl(0, 5%, 40%);
       }
 
       button {
@@ -75,16 +81,14 @@
       }
 
       a {
-        outline: 0;
         color: inherit;
-        text-decoration: none;
       }
     </style>
   </head>
 
   <body>
     <header>
-      <div id="toggleMenu">
+      <button id="toggleMenu">
         <svg
           id="openIcon"
           width="32"
@@ -97,6 +101,7 @@
             d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
             clip-rule="evenodd"
           />
+          <title>Open menu</title>
         </svg>
         <svg
           hidden
@@ -111,8 +116,9 @@
             d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
             clip-rule="evenodd"
           />
+          <title>Close menu</title>
         </svg>
-      </div>
+      </button>
       <nav id="toggleNav" hidden>
         <a href="#">Home</a>
         <a href="#">About</a>
@@ -122,18 +128,27 @@
 
     <main>
       <h1>
-        <img width="433" height="108" src="images/title.png" />
+        <img
+          width="433"
+          height="108"
+          src="images/title.png"
+          alt="The Speakeasy"
+        />
       </h1>
 
-      <h3>The drinks</h3>
+      <h2>The drinks</h2>
       <ul class="carousel">
         <li class="drink">
-          <h4>Old Fashioned</h4>
+          <a
+            href="https://www.diffordsguide.com/cocktails/recipe/4782/old-fashioned"
+          >
+            <h3>Old Fashioned</h3>
+          </a>
           <img
             width="220"
             height="330"
             src="https://www.notion.so/image/https%3A%2F%2Fcdn.diffords.com%2Fcontrib%2Fstock-images%2F2019%2F07%2F5d35db08cfe6f.jpg?table=block&id=1684553e-32ce-4dae-bf74-699aa9d27a4e&width=600&userId=6828a602-f8be-490a-97b7-ad3cf723003b&cache=v2"
-            alt=""
+            alt="Old Fashioned 2 oz, A short tumbler of dark amber liquid, with a big chunk of perfectly clear ice and a strip of bright orange peel"
           />
           <ul>
             <li>2 oz Bourbon</li>
@@ -144,19 +159,18 @@
             Stir all ingredients with ice and strain into ice-filled glass
             (preferably over block ice).
           </p>
-          <a
-            href="https://www.diffordsguide.com/cocktails/recipe/4782/old-fashioned"
-          >
-            Read more
-          </a>
         </li>
         <li class="drink">
-          <h4>Suffragette</h4>
+          <a
+            href="https://www.diffordsguide.com/cocktails/recipe/4813/suffragette"
+          >
+            <h3>Suffragette</h3>
+          </a>
           <img
             width="220"
             height="330"
             src="https://www.notion.so/image/https%3A%2F%2Fcdn.diffords.com%2Fcontrib%2Fstock-images%2F2019%2F09%2F5d7252c394997.jpg?table=block&id=d017c589-65bf-4335-9c2b-58dc53df4fc0&width=600&userId=6828a602-f8be-490a-97b7-ad3cf723003b&cache=v2"
-            alt=""
+            alt="Suffragette 1.5 oz, A tall glass with a slender stem containing a clear liquid garnished with delicate wildflowers"
           />
           <ul>
             <li>1.5 oz Gin</li>
@@ -164,19 +178,16 @@
             <li>0.33 oz St Germain</li>
           </ul>
           <p>Stir all ingredients with ice and strain.</p>
-          <a
-            href="https://www.diffordsguide.com/cocktails/recipe/4813/suffragette"
-          >
-            Read more
-          </a>
         </li>
         <li class="drink">
-          <h4>Emerson</h4>
+          <a href="https://www.diffordsguide.com/cocktails/recipe/3279/emerson">
+            <h3>Emerson</h3>
+          </a>
           <img
             width="220"
             height="330"
             src="https://www.notion.so/image/https%3A%2F%2Fcdn.diffords.com%2Fcontrib%2Fstock-images%2F2016%2F7%2F20%2F201648ff9b36f0c51586ffb9c2cff5f60e8f.jpg?table=block&id=97182a65-d97e-4453-9ec8-aa51b49aec37&width=600&userId=6828a602-f8be-490a-97b7-ad3cf723003b&cache=v2"
-            alt=""
+            alt="Emerson 1.5 oz, A tall glass of rich reddish liquid with a shiny cherry garnish"
           />
           <ul>
             <li>1.5 oz Gin</li>
@@ -187,17 +198,18 @@
           <p>
             Shake all ingredients with ice and fine strain into chilled glass.
           </p>
-          <a href="https://www.diffordsguide.com/cocktails/recipe/3279/emerson">
-            Read more
-          </a>
         </li>
         <li class="drink">
-          <h4>Old Friend</h4>
+          <a
+            href="https://www.diffordsguide.com/cocktails/recipe/4258/old-friend"
+          >
+            <h3>Old Friend</h3>
+          </a>
           <img
             width="220"
             height="330"
             src="https://www.notion.so/image/https%3A%2F%2Fcdn.diffords.com%2Fcontrib%2Fstock-images%2F2017%2F8%2F04%2F2017ea1688ded26065139cbb2150f78fa37c.jpg?table=block&id=d7b80db4-3426-4dc6-9066-ed28b28a899d&width=600&userId=6828a602-f8be-490a-97b7-ad3cf723003b&cache=v2"
-            alt=""
+            alt="Old Friend 1.5 oz, A flat coupe glass full of bright orange liquid with a strip of grapefruit to garnish"
           />
           <ul>
             <li>1.5 oz Gin</li>
@@ -208,32 +220,30 @@
           <p>
             Shake all ingredients with ice and fine strain into chilled glass.
           </p>
-          <a
-            href="https://www.diffordsguide.com/cocktails/recipe/4258/old-friend"
-          >
-            Read more
-          </a>
         </li>
       </ul>
     </main>
 
     <script>
-      const button = document.querySelector("#toggleMenu");
-      const openIcon = document.querySelector("#openIcon");
-      const closeIcon = document.querySelector("#closeIcon");
-      const nav = document.querySelector("#toggleNav");
+      const button = document.querySelector('#toggleMenu');
+      const openIcon = document.querySelector('#openIcon');
+      const closeIcon = document.querySelector('#closeIcon');
+      const nav = document.querySelector('#toggleNav');
 
-      button.addEventListener("click", () => {
+      button.addEventListener('click', () => {
         if (nav.hidden) {
-          openIcon.setAttribute("hidden", "");
-          closeIcon.removeAttribute("hidden");
-          nav.removeAttribute("hidden");
+          openIcon.setAttribute('hidden', '');
+          closeIcon.removeAttribute('hidden');
+          nav.removeAttribute('hidden');
         } else {
-          openIcon.removeAttribute("hidden");
-          closeIcon.setAttribute("hidden", "");
-          nav.setAttribute("hidden", "");
+          openIcon.removeAttribute('hidden');
+          closeIcon.setAttribute('hidden', '');
+          nav.setAttribute('hidden', '');
         }
       });
+      function setCookie() {
+        document.cookie = 'SameSite=Strict; Secure';
+      }
     </script>
   </body>
 </html>
